@@ -270,7 +270,9 @@ class Home extends StatelessWidget {
                 transform: Matrix4.rotationY(0.1),
 
                 child: Text(
-                  "Hii AJAY I Am Inside a Container ",
+                  "Hii AJAY I Am Inside a Container , "
+                      "Added new text on home screen",
+
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
 
