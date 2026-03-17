@@ -39,6 +39,7 @@ class Home extends StatelessWidget {
       "October",
       "November",
       "December",
+      "in window laptop",
     ];
 
     return DefaultTabController(
@@ -88,7 +89,7 @@ class Home extends StatelessWidget {
             fontWeight:FontWeight.bold),),),*/
 
             // we use the Flutter - Horizontal List use the simple Listview
-            Container(
+            SizedBox(
               height: 120,
               child: ListView(
                 scrollDirection: Axis.horizontal,
