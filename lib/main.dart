@@ -212,7 +212,11 @@ class Home extends StatelessWidget {
                   margin: EdgeInsets.all(4),
                   child: Card(
                     child: ExpansionTile(
-                  
+                      leading: Icon(
+                          Icons.calendar_month,
+                        color:Colors.blue,
+                        size: 30,
+                      ),
                       title: Text(months[index]),
                   
                       children: [
@@ -243,45 +247,134 @@ class Home extends StatelessWidget {
             ),
 
             Center(
-              child: Container(
-                //  1 height and width of the container
-                height: 200,
-                width: double.infinity,
+              child: Column(
+                children: [
+                  Container(
+                    //  1 height and width of the container
+                    height: 200,
+                    width: double.infinity,
 
-                // 2 background color of the containerS
+                    // 2 background color of the containerS
 
-                // 3 margin of the  Container
-                margin: EdgeInsets.all(20),
+                    // 3 margin of the  Container
+                    margin: EdgeInsets.all(20),
 
-                // 4 Padding of the Container
-                padding: EdgeInsets.all(25),
+                    // 4 Padding of the Container
+                    padding: EdgeInsets.all(25),
 
-                // 5  Alignment of the container
-                alignment: Alignment.center,
+                    // 5  Alignment of the container
+                    alignment: Alignment.center,
 
-                // 6  Decoration of the Container
-                decoration: BoxDecoration(
-                  color: Colors.blue,
+                    // 6  Decoration of the Container
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
 
-                  //  7 Add rounded Corners
-                  borderRadius: BorderRadius.circular(15),
-                  border: Border.all(color: Colors.black, width: 3),
-                ),
+                      //  7 Add rounded Corners
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(color: Colors.black, width: 3),
+                    ),
 
-                //  8 Rotation of the Container
-                transform: Matrix4.rotationY(0.1),
+                    //  8 Rotation of the Container
+                    transform: Matrix4.rotationY(0.1),
 
-                child: Text(
-                  "Hii AJAY I Am Inside a Container , "
-                      "Added new text on home screen",
+                    child: Text(
+                      "Hii AJAY I Am Inside a Container , "
+                          "Added new text on home screen",
 
-                  style: TextStyle(fontSize: 20, color: Colors.white),
-                ),
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ),
 
-                // we use the horizontal list
+                  ),
+                 /* ElevatedButton(onPressed: (){
+                    showDialog(context: context, builder: (context){
+                      return AlertDialog(
+                        // To display the title it is optional
+                        title: Text('Welcome'),
+                        // Message which will be pop up on the screen
+                        content: Text('GeeksforGeeks'),
+                        actions: [
+                          TextButton(
+                            child: Text('CANCEL'),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text('ACCEPT'),
+                          ),
+                        ],
+                      );
+                    });
+                  }, child: Text("data"))*/
+                  ElevatedButton(
+
+                      // button styling
+                    style: ElevatedButton.styleFrom(
+
+
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 40,
+                        vertical: 12
+                      ),
+                    /*  shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10), // rounded corner
+                      ),*/
+                     shape: RoundedRectangleBorder(
+                       borderRadius: BorderRadius.circular(10)
+                     ),
+                      elevation: 10, // shadow
+                    ),
+
+                      onPressed: (){
+                    showDialog(context: context, builder: (context){
+                      return AlertDialog(
+                        title: Text("Welcome to Dialog",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue
+                        ),
+                        ),
+                        content: Text("button outside Container",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87
+                        ),
+                        ),
+                        actions: [
+                          TextButton(onPressed: (){
+                            Navigator.of(context).pop();
+                          }, child: Text("Cancel",
+                          style: TextStyle(color: Colors.red,
+                          fontWeight: FontWeight.bold,
+                            fontSize: 20
+                          ),
+                          )),
+
+                          TextButton(onPressed: (){
+                            Navigator.of(context).pop();
+                          }, child: Text("ok",
+                          style: TextStyle(
+                              color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                            fontSize: 20
+                          ),
+                          ))
+                        ],
+
+                      );
+                    });
+                  }, child: Text("AlertBox"))
+                ],
               ),
             ),
           ],
+
         ),
 
         // we use the Floating action Button
