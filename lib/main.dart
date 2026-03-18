@@ -285,31 +285,6 @@ class Home extends StatelessWidget {
                     ),
 
                   ),
-                 /* ElevatedButton(onPressed: (){
-                    showDialog(context: context, builder: (context){
-                      return AlertDialog(
-                        // To display the title it is optional
-                        title: Text('Welcome'),
-                        // Message which will be pop up on the screen
-                        content: Text('GeeksforGeeks'),
-                        actions: [
-                          TextButton(
-                            child: Text('CANCEL'),
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: Text('ACCEPT'),
-                          ),
-                        ],
-                      );
-                    });
-                  }, child: Text("data"))*/
                   ElevatedButton(
 
                       // button styling
@@ -369,7 +344,40 @@ class Home extends StatelessWidget {
 
                       );
                     });
-                  }, child: Text("AlertBox"))
+                  }, child: Text("AlertBox")),
+
+                  SizedBox(height: 20),
+
+
+                  // Flutter - Circular & Linear Progress Indicators
+
+
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+
+                      CircularProgressIndicator(
+                        color: Colors.blue,
+                      ),
+
+                      SizedBox(height: 15),
+
+                      Text(
+                        "Loading...",
+                        style: TextStyle(fontSize: 16),
+                      ),
+
+                    ],
+                  ),
+
+                  SizedBox(height: 20),
+                  LinearProgressIndicator(
+                    color: Colors.blue,
+                    backgroundColor:Colors.grey,
+                    minHeight: 6,
+                    value: 0.7,
+                  )
+
                 ],
               ),
             ),
