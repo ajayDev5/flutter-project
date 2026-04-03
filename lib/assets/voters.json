@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Ajay Kumar",
+    "father_name": "Ramesh Kumar",
+    "epic": "HR123456",
+    "ward": 1,
+    "booth": "Govt School",
+    "room": 2,
+    "serial": 101
+  },
+  {
+    "name": "Vikash Sharma",
+    "father_name": "Mahesh Sharma",
+    "epic": "HR654321",
+    "ward": 2,
+    "booth": "Primary School",
+    "room": 1,
+    "serial": 202
+  }
+]
